@@ -23,7 +23,7 @@
 		|with \s+ timeout\b .*
 		|script\b .*
 		|( considering | ignoring )\b .*
-		)\s*(--.*?)?$
+		)\s*((?:--|#).*?)?$
 	</string>
 	<key>foldingStopMarker</key>
 	<string>^\s*end\b.*$</string>
@@ -95,7 +95,7 @@
 						</dict>
 					</dict>
 					<key>end</key>
-					<string>^\s*(end(?:\s+script)?)(?=\s*(--.*?)?$)</string>
+					<string>^\s*(end(?:\s+script)?)(?=\s*((?:--|#).*?)?$)</string>
 					<key>endCaptures</key>
 					<dict>
 						<key>1</key>
@@ -157,7 +157,7 @@
 						we can leave it like this though, as it sorta works.
 					</string>
 					<key>end</key>
-					<string>^\s*(end)(?:\s+(\2))?(?=\s*(--.*?)?$)</string>
+					<string>^\s*(end)(?:\s+(\2))?(?=\s*((?:--|#).*?)?$)</string>
 					<key>endCaptures</key>
 					<dict>
 						<key>1</key>
@@ -213,7 +213,7 @@
 					<key>comment</key>
 					<string>TODO: match `given` parameters</string>
 					<key>end</key>
-					<string>^\s*(end)(?:\s+(\2))?(?=\s*(--.*?)?$)</string>
+					<string>^\s*(end)(?:\s+(\2))?(?=\s*((?:--|#).*?)?$)</string>
 					<key>endCaptures</key>
 					<dict>
 						<key>1</key>
@@ -254,7 +254,7 @@
 					<string>^(?x)
 						\s*(to|on)\s+ 					# "on" or "to"
 						(\w+)							# function name
-						(?=\s*(--.*?)?$)				# nothing else
+						(?=\s*((?:--|\#).*?)?$)			# nothing else
 					</string>
 					<key>beginCaptures</key>
 					<dict>
@@ -270,7 +270,7 @@
 						</dict>
 					</dict>
 					<key>end</key>
-					<string>^\s*(end)(?:\s+(\2))?(?=\s*(--.*?)?$)</string>
+					<string>^\s*(end)(?:\s+(\2))?(?=\s*((?:--|#).*?)?$)</string>
 					<key>endCaptures</key>
 					<dict>
 						<key>1</key>
@@ -315,7 +315,7 @@
 					<key>begin</key>
 					<string>^\s*(considering)\b</string>
 					<key>end</key>
-					<string>^\s*(end(?:\s+considering)?)(?=\s*(--.*?)?$)</string>
+					<string>^\s*(end(?:\s+considering)?)(?=\s*((?:--|#).*?)?$)</string>
 					<key>name</key>
 					<string>meta.block.considering.applescript</string>
 					<key>patterns</key>
@@ -366,7 +366,7 @@
 					<key>begin</key>
 					<string>^\s*(ignoring)\b</string>
 					<key>end</key>
-					<string>^\s*(end(?:\s+ignoring)?)(?=\s*(--.*?)?$)</string>
+					<string>^\s*(end(?:\s+ignoring)?)(?=\s*((?:--|#).*?)?$)</string>
 					<key>name</key>
 					<string>meta.block.ignoring.applescript</string>
 					<key>patterns</key>
@@ -425,7 +425,7 @@
 						</dict>
 					</dict>
 					<key>end</key>
-					<string>^\s*(end(?:\s+if)?)(?=\s*(--.*?)?$)</string>
+					<string>^\s*(end(?:\s+if)?)(?=\s*((?:--|#).*?)?$)</string>
 					<key>endCaptures</key>
 					<dict>
 						<key>1</key>
@@ -474,7 +474,7 @@
 						</dict>
 					</dict>
 					<key>end</key>
-					<string>^\s*(end(?:\s+(try|error))?)(?=\s*(--.*?)?$)</string>
+					<string>^\s*(end(?:\s+(try|error))?)(?=\s*((?:--|#).*?)?$)</string>
 					<key>endCaptures</key>
 					<dict>
 						<key>1</key>
@@ -534,7 +534,7 @@
 						</dict>
 					</dict>
 					<key>end</key>
-					<string>^\s*(end(?:\s+using\s+terms\s+from)?)(?=\s*(--.*?)?$)</string>
+					<string>^\s*(end(?:\s+using\s+terms\s+from)?)(?=\s*((?:--|#).*?)?$)</string>
 					<key>endCaptures</key>
 					<dict>
 						<key>1</key>
@@ -565,7 +565,7 @@
 						</dict>
 					</dict>
 					<key>end</key>
-					<string>^\s*(end(?:\s+timeout)?)(?=\s*(--.*?)?$)</string>
+					<string>^\s*(end(?:\s+timeout)?)(?=\s*((?:--|#).*?)?$)</string>
 					<key>endCaptures</key>
 					<dict>
 						<key>1</key>
@@ -596,7 +596,7 @@
 						</dict>
 					</dict>
 					<key>end</key>
-					<string>^\s*(end(?:\s+transaction)?)(?=\s*(--.*?)?$)</string>
+					<string>^\s*(end(?:\s+transaction)?)(?=\s*((?:--|#).*?)?$)</string>
 					<key>endCaptures</key>
 					<dict>
 						<key>1</key>
@@ -638,7 +638,7 @@
 						</dict>
 					</dict>
 					<key>end</key>
-					<string>^\s*(end(?:\s+repeat)?)(?=\s*(--.*?)?$)</string>
+					<string>^\s*(end(?:\s+repeat)?)(?=\s*((?:--|#).*?)?$)</string>
 					<key>endCaptures</key>
 					<dict>
 						<key>1</key>
@@ -674,7 +674,7 @@
 						</dict>
 					</dict>
 					<key>end</key>
-					<string>^\s*(end(?:\s+repeat)?)(?=\s*(--.*?)?$)</string>
+					<string>^\s*(end(?:\s+repeat)?)(?=\s*((?:--|#).*?)?$)</string>
 					<key>endCaptures</key>
 					<dict>
 						<key>1</key>
@@ -715,7 +715,7 @@
 						</dict>
 					</dict>
 					<key>end</key>
-					<string>^\s*(end(?:\s+repeat)?)(?=\s*(--.*?)?$)</string>
+					<string>^\s*(end(?:\s+repeat)?)(?=\s*((?:--|#).*?)?$)</string>
 					<key>endCaptures</key>
 					<dict>
 						<key>1</key>
@@ -748,7 +748,7 @@
 				</dict>
 				<dict>
 					<key>begin</key>
-					<string>^\s*(repeat)\b(?=\s*(--.*?)?$)</string>
+					<string>^\s*(repeat)\b(?=\s*((?:--|#).*?)?$)</string>
 					<key>beginCaptures</key>
 					<dict>
 						<key>1</key>
@@ -758,7 +758,7 @@
 						</dict>
 					</dict>
 					<key>end</key>
-					<string>^\s*(end(?:\s+repeat)?)(?=\s*(--.*?)?$)</string>
+					<string>^\s*(end(?:\s+repeat)?)(?=\s*((?:--|#).*?)?$)</string>
 					<key>endCaptures</key>
 					<dict>
 						<key>1</key>
@@ -789,7 +789,7 @@
 						</dict>
 					</dict>
 					<key>end</key>
-					<string>^\s*(end(?:\s+repeat)?)(?=\s*(--.*?)?$)</string>
+					<string>^\s*(end(?:\s+repeat)?)(?=\s*((?:--|#).*?)?$)</string>
 					<key>endCaptures</key>
 					<dict>
 						<key>1</key>
@@ -988,7 +988,7 @@
 				</dict>
 				<dict>
 					<key>begin</key>
-					<string>\b(if)\b(?=.*\bthen\b(?!\s*(--.*?)?$))</string>
+					<string>\b(if)\b(?=.*\bthen\b(?!\s*((?:--|#).*?)?$))</string>
 					<key>beginCaptures</key>
 					<dict>
 						<key>1</key>
@@ -1029,7 +1029,7 @@
 					<key>comment</key>
 					<string>tell Textmate</string>
 					<key>end</key>
-					<string>^\s*(end(?:\s+tell)?)(?=\s*(--.*?)?$)</string>
+					<string>^\s*(end(?:\s+tell)?)(?=\s*((?:--|#).*?)?$)</string>
 					<key>name</key>
 					<string>meta.block.tell.application.textmate.applescript</string>
 					<key>patterns</key>
@@ -1062,7 +1062,7 @@
 					<key>comment</key>
 					<string>tell Finder</string>
 					<key>end</key>
-					<string>^\s*(end(?:\s+tell)?)(?=\s*(--.*?)?$)</string>
+					<string>^\s*(end(?:\s+tell)?)(?=\s*((?:--|#).*?)?$)</string>
 					<key>name</key>
 					<string>meta.block.tell.application.finder.applescript</string>
 					<key>patterns</key>
@@ -1095,7 +1095,7 @@
 					<key>comment</key>
 					<string>tell System Events</string>
 					<key>end</key>
-					<string>^\s*(end(?:\s+tell)?)(?=\s*(--.*?)?$)</string>
+					<string>^\s*(end(?:\s+tell)?)(?=\s*((?:--|#).*?)?$)</string>
 					<key>name</key>
 					<string>meta.block.tell.application.system-events.applescript</string>
 					<key>patterns</key>
@@ -1128,7 +1128,7 @@
 					<key>comment</key>
 					<string>tell iTunes</string>
 					<key>end</key>
-					<string>^\s*(end(?:\s+tell)?)(?=\s*(--.*?)?$)</string>
+					<string>^\s*(end(?:\s+tell)?)(?=\s*((?:--|#).*?)?$)</string>
 					<key>name</key>
 					<string>meta.block.tell.application.itunes.applescript</string>
 					<key>patterns</key>
@@ -1161,7 +1161,7 @@
 					<key>comment</key>
 					<string>tell generic application process</string>
 					<key>end</key>
-					<string>^\s*(end(?:\s+tell)?)(?=\s*(--.*?)?$)</string>
+					<string>^\s*(end(?:\s+tell)?)(?=\s*((?:--|#).*?)?$)</string>
 					<key>name</key>
 					<string>meta.block.tell.application-process.generic.applescript</string>
 					<key>patterns</key>
@@ -1190,7 +1190,7 @@
 					<key>comment</key>
 					<string>tell generic application</string>
 					<key>end</key>
-					<string>^\s*(end(?:\s+tell)?)(?=\s*(--.*?)?$)</string>
+					<string>^\s*(end(?:\s+tell)?)(?=\s*((?:--|#).*?)?$)</string>
 					<key>name</key>
 					<string>meta.block.tell.application.generic.applescript</string>
 					<key>patterns</key>
@@ -1219,7 +1219,7 @@
 					<key>comment</key>
 					<string>generic tell block</string>
 					<key>end</key>
-					<string>^\s*(end(?:\s+tell)?)(?=\s*(--.*?)?$)</string>
+					<string>^\s*(end(?:\s+tell)?)(?=\s*((?:--|#).*?)?$)</string>
 					<key>name</key>
 					<string>meta.block.tell.generic.applescript</string>
 					<key>patterns</key>
@@ -1520,6 +1520,20 @@
 					<string>(--).*$\n?</string>
 					<key>name</key>
 					<string>comment.line.double-dash.applescript</string>
+				</dict>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.comment.applescript</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>(#).*$\n?</string>
+					<key>name</key>
+					<string>comment.line.hash.applescript</string>
 				</dict>
 				<dict>
 					<key>begin</key>
